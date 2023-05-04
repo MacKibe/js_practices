@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-size: 5em;
+      }
+
+      section {
+        background-color: rgb(151, 151, 151);
+        width: 20rem;
+      }
+
+      label {
+        display: block;
+      }
+
+      a {
+        display: none;
+      }
+
+      input {
+        display: none;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 10%;
+        font-size: 3rem;
+        text-align: center;
+      }
+
+      div a {
+        padding: 2% 4%;
+      }
+
+      button {
+        font-size: 1.5rem;
+        background-color: #ffebee;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="viv">
+        <label>
+          <input type="checkbox" name="" id="listboxes" />
+          <span>mangoes</span>
+        </label>
+      </div>
+
+      <div class="viv">
+        <label>
+          <input type="checkbox" name="" id="listboxes" />
+          <span>apples</span>
+        </label>
+      </div>
+
+      <div class="viv">
+        <label>
+          <input type="checkbox" name="" id="listboxes" />
+          <span>bananas</span>
+        </label>
+      </div>
+
+      <div class="viv">
+        <label>
+          <input type="checkbox" name="" id="listboxes" />
+          <span>passion</span>
+        </label>
+      </div>
+    </section>
+
+    <div class="btnSection">
+      <a href="" onclick="deleteItem()" id="link"> Delete</a>
+      <a href="" onclick="editItem()" id="link"> Edit</a>
+      <button onclick="showItems()" id="settingsBtn">Settings</button>
+    </div>
+    <script>
+      // create variable for the btn, checkboxes
+      const sBtn = document.querySelector("#settingsBtn");
+      const cboxes = document.querySelectorAll("#listboxes");
+      const opts = document.querySelectorAll("#link");
+      const itemBox = document.querySelectorAll(".viv");
+
+      // Display the checkboxes and the options which is edit and delete.
+      function showItems() {
+        // get the all checkbox elements
+        Array.from(cboxes).forEach((item) => {
+          // display the elements
+          item.style.display = "block";
+        });
+
+        // display the two options
+        Array.from(opts).forEach((element) => {
+          element.style.display = "flex";
+        });
+      }
+    </script>
+  </body>
+</html>

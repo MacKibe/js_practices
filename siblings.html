@@ -1,0 +1,30 @@
+<!-- getting siblings -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="result">
+      <li class="first">first</li>
+      <li>list itme 2</li>
+      <li>item 3</li>
+      <li id="last">last</li>
+    </ul>
+
+    <script>
+      const firstItem = document.querySelector(".first");
+      //   add another nextSibling property to show the second item otherwise the whitespace will be displayed.
+    //   Or use nextElementSibling
+      const secondItem = firstItem.nextElementSibling;
+
+      console.log(secondItem);
+
+      const lastItem = document.querySelector("#last");
+      const thirdItem = (lastItem.previousElementSibling.style.color = "red");
+    </script>
+  </body>
+</html>

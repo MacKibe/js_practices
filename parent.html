@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="result">
+      <h1>Hello World</h1>
+      <div class="second">
+        <h2>Second Heading</h2>
+        <h3>Another heading</h3>
+      </div>
+    </div>
+
+    <!-- getting the parent element -->
+    <!-- my scripts will go in here. -->
+    <script>
+      const heading2 = document.querySelector("h2");
+      const parent = heading2.parentElement;
+
+      parent.style.color = "red";
+    </script>
+  </body>
+</html>

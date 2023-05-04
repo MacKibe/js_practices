@@ -1,0 +1,36 @@
+<!-- navigating DOM to the children. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="result">
+      <li>orange</li>
+      <li>apple</li>
+      <li>banana</li>
+      <li>pear</li>
+      <li>tomato</li>
+    </ul>
+
+    <script>
+      const result = document.querySelector("#result");
+      const allChildren = result.childNodes;
+      const lengthChildren = result.childElementCount;
+      const children = result.children;
+      // shows all children with their whitespaces which is treated as a text node
+      console.log(allChildren);
+      // shows the number of children.
+      console.log("length of Children = " + lengthChildren);
+      //   shows the only children.
+      console.log(children);
+      // shows first child
+      console.log(result.firstChild);
+      // shows last child.
+      console.log(result.lastChild);
+    </script>
+  </body>
+</html>
